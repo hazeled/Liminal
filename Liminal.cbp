@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Liminal" />
+		<Option pch_mode="2" />
+		<Option compiler="cygwin" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Liminal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="cygwin" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Liminal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="cygwin" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++17" />
+			<Add option="-DBUILD_DLL" />
+			<Add option="-DBUILD_LOGGING" />
+			<Add option="-DGLVERSIONMAJOR=2" />
+			<Add option="-DGLVERSIONMINOR=0" />
+			<Add option="-DGLEW_STATIC" />
+		</Compiler>
+		<Linker>
+			<Add library="lib/libglfw3dll.a" />
+			<Add library="lib/glew32.lib" />
+			<Add library="opengl32" />
+			<Add directory="lib" />
+		</Linker>
+		<Unit filename="recourses/Debug.frag" />
+		<Unit filename="recourses/Debug.vert" />
+		<Unit filename="src/App.h" />
+		<Unit filename="src/App/App.cpp" />
+		<Unit filename="src/App/UndefinedFunction.cpp" />
+		<Unit filename="src/Buffers.h" />
+		<Unit filename="src/Buffers/Buffers.cpp" />
+		<Unit filename="src/Components.h" />
+		<Unit filename="src/Core.h" />
+		<Unit filename="src/GLFWStaticFunctions.h" />
+		<Unit filename="src/Liminal.h" />
+		<Unit filename="src/Logging.h" />
+		<Unit filename="src/Recourses.h" />
+		<Unit filename="src/Renderer.h" />
+		<Unit filename="src/Renderer/Renderer.cpp" />
+		<Unit filename="src/SceneManager.h" />
+		<Unit filename="src/SceneManager/SceneManager.cpp" />
+		<Unit filename="src/Screen.h" />
+		<Unit filename="src/Screen/Screen.cpp" />
+		<Unit filename="src/Shader.h" />
+		<Unit filename="src/ShaderSource/Debug.h" />
+		<Unit filename="src/Shaders/Shader.cpp" />
+		<Unit filename="src/Shapes.h" />
+		<Unit filename="src/pch.h">
+			<Option compile="1" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

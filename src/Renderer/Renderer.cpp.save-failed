@@ -1,0 +1,19 @@
+#include "../Renderer.h"
+
+#include "../pch.h"
+#include "../SceneManager.h"
+#include "../Buffers.h"
+#include "../Components.h"
+
+namespace Liminal
+{
+    void Renderer::Render(entt::entity* entity, entt::registry* registry)
+    {
+        auto& mesh = registry->get<Mesh>(*entity);
+        for (int i = 0; i < mesh.; i++)
+        {
+
+        }
+        //Buffers::PushTri();
+    }
+}
